@@ -11,11 +11,16 @@
     "fix": "npx eslint src --ext .ts,.tsx --fix"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.1.1",
     "@phosphor-icons/react": "^2.0.10",
+    "date-fns": "^2.30.0",
+    "immer": "^10.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.45.1",
     "react-router-dom": "^6.13.0",
-    "styled-components": "^6.0.0-rc.6"
+    "styled-components": "^6.0.0-rc.6",
+    "zod": "^3.21.4"
   },
   "devDependencies": {
     "@rocketseat/eslint-config": "^1.2.0",
