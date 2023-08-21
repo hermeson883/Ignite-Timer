@@ -49,7 +49,7 @@ export const HistoryList = styled.div`
       background: ${(props) => props.theme['gray-700']};
       border-radius: 4px solid ${(props) => props.theme['gray-800']};
       padding: 1rem;
-      font-size: 0.875;
+      font-size: 0.875rem;
       line-height: 1.6rem;
 
       &:first-child {
@@ -61,5 +61,30 @@ export const HistoryList = styled.div`
         padding-right: 1.5rem;
       }
     }
+  }
+`
+
+const STATUS_COLOR = {
+  green: 'green-500',
+  red: 'red-500',
+  yellow: 'yellow-500',
+} as const // Permite que esse objeto tenha que ser somente green,red ou yellow, ou seja, não pode ser uma string qualquer
+
+interface StatusProps {
+  statuscolor: keyof typeof STATUS_COLOR
+}
+
+export const Status = styled.span<StatusProps>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  &::before {
+    content: '';
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 100%;
+    background: ${(props) => props.theme[STATUS_COLOR[props.statuscolor]]};
   }
 `
